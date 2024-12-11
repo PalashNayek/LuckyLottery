@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_customar"
+    app:startDestination="@id/customarHomeFragment">
+    <fragment
+        android:id="@+id/customarHomeFragment"
+        android:name="com.palash.luckylottery.fragments.customar_fragment.CustomarHomeFragment"
+        android:label="fragment_customar_home"
+        tools:layout="@layout/fragment_customar_home" />
+    <fragment
+        android:id="@+id/customarNotificationFragment"
+        android:name="com.palash.luckylottery.fragments.customar_fragment.CustomarNotificationFragment"
+        android:label="fragment_customar_notification"
+        tools:layout="@layout/fragment_customar_notification" >
+
+        <deepLink
+            app:uri="myapp://open/target" />
+    </fragment>
+    <fragment
+        android:id="@+id/customarProfileFragment"
+        android:name="com.palash.luckylottery.fragments.customar_fragment.CustomarProfileFragment"
+        android:label="fragment_customar_profile"
+        tools:layout="@layout/fragment_customar_profile" />
+    <fragment
+        android:id="@+id/customarTricketOrderFragment"
+        android:name="com.palash.luckylottery.fragments.customar_fragment.CustomarTricketOrderFragment"
+        android:label="fragment_customar_tricket_order"
+        tools:layout="@layout/fragment_customar_tricket_order" />
+    <fragment
+        android:id="@+id/liveGameFragment"
+        android:name="com.palash.luckylottery.fragments.customar_fragment.LiveGameFragment"
+        android:label="fragment_live_game"
+        tools:layout="@layout/fragment_live_game" />
+</navigation>

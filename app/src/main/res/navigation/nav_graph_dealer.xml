@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_dealer"
+    app:startDestination="@id/dealerHomeFragment">
+
+    <fragment
+        android:id="@+id/dealerHomeFragment"
+        android:name="com.palash.luckylottery.fragments.dealer_fragment.DealerHomeFragment"
+        android:label="fragment_dealer_home"
+        tools:layout="@layout/fragment_dealer_home" >
+        <action
+            android:id="@+id/action_dealerHomeFragment_to_dealerPaymentFragment"
+            app:destination="@id/dealerPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customarProfileFragment"
+        android:name="com.palash.luckylottery.fragments.customar_fragment.CustomarProfileFragment"
+        android:label="fragment_customar_profile"
+        tools:layout="@layout/fragment_customar_profile" />
+    <fragment
+        android:id="@+id/dealerPaymentFragment"
+        android:name="com.palash.luckylottery.fragments.dealer_fragment.DealerPaymentFragment"
+        android:label="fragment_dealer_payment"
+        tools:layout="@layout/fragment_dealer_payment" >
+        <action
+            android:id="@+id/action_dealerPaymentFragment_to_dealerHomeFragment"
+            app:destination="@id/dealerHomeFragment" />
+        <action
+            android:id="@+id/action_dealerPaymentFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.palash.luckylottery.fragments.dealer_fragment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_dealerPaymentFragment"
+            app:destination="@id/dealerPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favBuyTicketListFragment"
+        android:name="com.palash.luckylottery.fragments.dealer_fragment.DealerPortalFragment"
+        android:label="fragment_fav_buy_ticket_list"
+        tools:layout="@layout/fragment_fav_buy_ticket_list" />
+    <fragment
+        android:id="@+id/dealerNotificationFragment"
+        android:name="com.palash.luckylottery.fragments.dealer_fragment.DealerNotificationFragment"
+        android:label="fragment_dealer_notification"
+        tools:layout="@layout/fragment_dealer_notification" />
+    <fragment
+        android:id="@+id/liveGameFragment"
+        android:name="com.palash.luckylottery.fragments.customar_fragment.LiveGameFragment"
+        android:label="fragment_live_game"
+        tools:layout="@layout/fragment_live_game" />
+</navigation>

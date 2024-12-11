@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057454251421",
+    "project_id": "luckeylottery",
+    "storage_bucket": "luckeylottery.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057454251421:android:c5041eda8de5d7291fa374",
+        "android_client_info": {
+          "package_name": "com.palash.luckylottery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa4_Xn7_wwxj640Uylv0-oYDSN2YXPY-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

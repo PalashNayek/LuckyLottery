@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="default_white">#FFC2C2C2</color>
+    <color name="royal_blue_dark">#5927BF</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="red">#fc002b</color>
+    <color name="lotteryTicketTxtColor">#333333</color>
+    <color name="txtColor1">#FFCDD2</color>
+    <color name="txtColor2">#F8BBD0</color>
+    <color name="txtColor3">#E1BEE7</color>
+    <color name="txtColor4">#D1C4E9</color>
+    <color name="txtColor5">#BBDEFB</color>
+    <color name="green">#009933</color>
+    <color name="orange">#FFA500</color>
+
+
+</resources>

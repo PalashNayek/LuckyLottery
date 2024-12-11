@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.palash.luckylottery.fragments.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_dealerActivity"
+            app:destination="@id/dealerActivity" />
+        <action
+            android:id="@+id/action_introFragment_to_customarDashActivity"
+            app:destination="@id/customarDashActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.palash.luckylottery.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_customarDashActivity"
+            app:destination="@id/customarDashActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_dealerActivity"
+            app:destination="@id/dealerActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/customarDashActivity"
+        android:name="com.palash.luckylottery.activity.CustomarDashActivity"
+        android:label="activity_customar_dash"
+        tools:layout="@layout/activity_customar_dash" />
+    <activity
+        android:id="@+id/dealerActivity"
+        android:name="com.palash.luckylottery.activity.DealerActivity"
+        android:label="activity_dealer"
+        tools:layout="@layout/activity_dealer" />
+</navigation>
