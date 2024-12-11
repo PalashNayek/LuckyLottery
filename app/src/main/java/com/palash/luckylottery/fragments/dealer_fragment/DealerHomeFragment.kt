@@ -68,7 +68,7 @@ class DealerHomeFragment : Fragment() {
         fun onLotteryClicked(lotteryHomeResponse: LotteryHomeResponse) {
             //Toast.makeText(requireContext(), "${lotteryHomeResponse.ticketNumber} clicked", Toast.LENGTH_SHORT).show()
 
-            //findNavController().navigate(R.id.action_dealerHomeFragment_to_dealerPaymentFragment)
+            findNavController().navigate(R.id.action_dealerHomeFragment_to_dealerPaymentFragment)
         }
 
         val adapter = DealerHomeAdapter(::onLotteryClicked)

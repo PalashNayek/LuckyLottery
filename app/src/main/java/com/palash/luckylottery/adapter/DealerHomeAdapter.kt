@@ -18,8 +18,6 @@ import kotlinx.coroutines.delay
 
 class DealerHomeAdapter(private val onProductClicked: (LotteryHomeResponse) -> Unit) :
     ListAdapter<LotteryHomeResponse, DealerHomeAdapter.ProgrammingViewHolder>(DiffUtil()) {
-    private var isMultiSelectMode = false // Tracks if multi-selection mode is active
-    private val selectedItems = mutableSetOf<Int>() // Stores selected item IDs
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProgrammingViewHolder {
         val view =
@@ -48,14 +46,8 @@ class DealerHomeAdapter(private val onProductClicked: (LotteryHomeResponse) -> U
             if (background) {
                 //true
                 mainLL.setBackgroundResource(R.drawable.selling_view)
-                if (selectedItems.contains(item.ticketId)) Color.LTGRAY else Color.TRANSPARENT
                 mainLL.setOnClickListener {
-                    if (!isMultiSelectMode) {
-                        isMultiSelectMode = true
-                    }
-                    toggleSelection(item)
-                    true
-                    //onProductClicked(item)
+                    onProductClicked(item)
                 }
             } else {
                 //false
@@ -76,25 +68,6 @@ class DealerHomeAdapter(private val onProductClicked: (LotteryHomeResponse) -> U
                 i++
             }
         }
-
-        private fun toggleSelection(item: LotteryHomeResponse) {
-            if (selectedItems.contains(item.ticketId)) {
-                selectedItems.remove(item.ticketId)
-            } else {
-                selectedItems.add(item.ticketId)
-            }
-            notifyItemChanged(adapterPosition) // Update only the clicked item
-            //onProductClicked(List<LotteryHomeResponse>)
-                //onProductClicked(getSelectedItems())
-        }
-
-        private fun getSelectedItems(): List<LotteryHomeResponse> {
-            return currentList.filter { selectedItems.contains(it.ticketId) }
-        }
-        // Get currently selected items
-        /*fun getSelectedItems(): List<LotteryHomeResponse> {
-            return currentList.filter { selectedItems.contains(it.ticketId) }
-        }*/
     }
 
     class DiffUtil : androidx.recyclerview.widget.DiffUtil.ItemCallback<LotteryHomeResponse>() {
